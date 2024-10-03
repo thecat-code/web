@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form action="/login" method="post">
+        <form id="loginForm" onsubmit="return login()">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -21,5 +21,23 @@
             <button type="submit">Login</button>
         </form>
     </div>
+
+    <script>
+        function login() {
+            // Get the input values
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Check credentials
+            if (username === 'user' && password === 'pass') {
+                // Redirect to home page
+                window.location.href = 'homepage.html';
+                return false; // Prevent form submission
+            } else {
+                alert('Invalid credentials');
+                return false; // Prevent form submission
+            }
+        }
+    </script>
 </body>
 </html>

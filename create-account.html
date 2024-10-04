@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <h2>Create Account</h2>
-        <form id="createAccountForm" onsubmit="return createAccount()">
+        <form id="createAccountForm" method="POST" action="/register">
             <div class="input-group">
                 <label for="newUsername">Username</label>
                 <input type="text" id="newUsername" name="newUsername" required>
@@ -25,25 +25,5 @@
             <button type="submit">Create Account</button>
         </form>
     </div>
-
-    <script>
-        function createAccount() {
-            // Get the input values
-            var newUsername = document.getElementById('newUsername').value;
-            var newPassword = document.getElementById('newPassword').value;
-            var confirmPassword = document.getElementById('confirmPassword').value;
-
-            // Check if passwords match
-            if (newPassword !== confirmPassword) {
-                alert('Passwords do not match');
-                return false; // Prevent form submission
-            }
-
-            // Logic to create the account (for demo purposes only)
-            alert('Account created successfully for ' + newUsername);
-            window.location.href = 'login.html'; // Redirect back to login page
-            return false; // Prevent form submission
-        }
-    </script>
 </body>
 </html>

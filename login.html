@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylish Login Page</title>
+    <title>Login</title>
     <link rel="stylesheet" href="CSS.css">
 </head>
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form id="loginForm" onsubmit="return login()">
+        <form id="loginForm" method="POST" action="/login">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -20,30 +20,6 @@
             </div>
             <button type="submit">Login</button>
         </form>
-        
-        <!-- Create Account Button -->
-        <div class="create-account">
-            <p>Don't have an account?</p>
-            <button onclick="window.location.href='create-account.html'">Create Account</button>
-        </div>
     </div>
-
-    <script>
-        function login() {
-            // Get the input values
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-
-            // Check credentials
-            if (username === 'user' && password === 'pass') {
-                // Redirect to home page
-                window.location.href = 'homepage.html';
-                return false; // Prevent form submission
-            } else {
-                alert('Invalid credentials');
-                return false; // Prevent form submission
-            }
-        }
-    </script>
 </body>
 </html>

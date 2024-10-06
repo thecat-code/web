@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="/static/CSS.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Create Account</h2>
+        <form id="createAccountForm" method="POST" action="/register">
+            <div class="input-group">
+                <label for="newUsername">Username</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+            </div>
+            <div class="input-group">
+                <label for="newPassword">Password</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+</body>
+</html>
